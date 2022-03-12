@@ -26,11 +26,11 @@ profiles: []
 profileDefaults:
   __nonStructural: true
 recoverTabs: true
-enableAnalytics: true
+enableAnalytics: false
 enableWelcomeTab: true
 electronFlags:
   - ['force_discrete_gpu', '0']
-enableAutomaticUpdates: true
+enableAutomaticUpdates: false
 version: 1
 vault: null
 encrypted: false
