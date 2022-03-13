@@ -8,7 +8,7 @@ export class TerminalConfigProvider extends ConfigProvider {
         },
         terminal: {
             frontend: 'xterm',
-            fontSize: 14,
+            fontSize: 15,
             fallbackFont: null,
             linePadding: 0,
             bell: 'off',
@@ -68,7 +68,7 @@ export class TerminalConfigProvider extends ConfigProvider {
     platformDefaults = {
         [Platform.macOS]: {
             terminal: {
-                font: 'Menlo',
+                font: 'Tabby Menlo',
             },
             hotkeys: {
                 'ctrl-c': ['Ctrl-C'],
@@ -109,7 +109,7 @@ export class TerminalConfigProvider extends ConfigProvider {
         },
         [Platform.Windows]: {
             terminal: {
-                font: 'Consolas',
+                font: 'Tabby Menlo',
                 rightClick: 'paste',
                 pasteOnMiddleClick: false,
                 copyOnSelect: true,
@@ -152,7 +152,7 @@ export class TerminalConfigProvider extends ConfigProvider {
         },
         [Platform.Linux]: {
             terminal: {
-                font: 'Liberation Mono',
+                font: 'Tabby Menlo',
             },
             hotkeys: {
                 'ctrl-c': ['Ctrl-C'],
