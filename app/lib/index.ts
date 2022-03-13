@@ -42,13 +42,11 @@ if (!app.requestSingleInstanceLock()) {
     app.exit(0)
 }
 
-if (argv.d) {
-    electronDebug({
-        isEnabled: true,
-        showDevTools: true,
-        devToolsMode: 'undocked',
-    })
-}
+electronDebug({
+    isEnabled: true,
+    showDevTools: true,
+    devToolsMode: 'undocked',
+})
 
 app.on('ready', async () => {
     if (process.platform === 'darwin') {
