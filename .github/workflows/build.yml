@@ -2,18 +2,18 @@ name: Package-Build
 on: [push, pull_request]
 jobs:
   Lint:
-    runs-on: macos-11.0
+    runs-on: macos-11
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2.3.4
+      uses: actions/checkout@v3
       with:
         fetch-depth: 0
 
     - name: Installing Node
-      uses: actions/setup-node@v2.4.0
+      uses: actions/setup-node@v3.0.0
       with:
-        node-version: 14
+        node-version: 16
 
     - name: Install deps
       run: |
@@ -31,7 +31,7 @@ jobs:
       run: yarn run lint
 
   macOS-Build:
-    runs-on: macos-11.0
+    runs-on: macos-11
     needs: Lint
     strategy:
       matrix:
@@ -41,23 +41,23 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2.3.4
+      uses: actions/checkout@v3
       with:
         fetch-depth: 0
 
     - name: Installing Node
-      uses: actions/setup-node@v2.4.0
+      uses: actions/setup-node@v3.0.0
       with:
-        node-version: 14
+        node-version: 16
 
     - name: Install deps
       run: |
         sudo npm i -g yarn@1.22.1
         cd app
-        yarn
+        yarn --network-timeout 1000000
         cd ..
         rm app/node_modules/.yarn-integrity
-        yarn
+        yarn --network-timeout 1000000
 
     - name: Build native deps
       run: scripts/build-native.js
@@ -129,19 +129,19 @@ jobs:
         path: artifact-zip
 
   Linux-Build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04 # build against an older glibc for compatibility
     needs: Lint
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2.3.4
+      uses: actions/checkout@v3
       with:
         fetch-depth: 0
 
     - name: Install Node
-      uses: actions/setup-node@v2.4.0
+      uses: actions/setup-node@v3.0.0
       with:
-        node-version: 14
+        node-version: 16
 
     - name: Install deps
       run: |
@@ -149,11 +149,10 @@ jobs:
         sudo apt-get install libarchive-tools zsh
         npm i -g yarn@1.19.1
         cd app
-        yarn
+        yarn --network-timeout 1000000
         cd ..
         rm app/node_modules/.yarn-integrity
-        yarn
-        npm run patch
+        yarn --network-timeout 1000000
 
     - name: Build native deps
       run: scripts/build-native.js
@@ -184,7 +183,7 @@ jobs:
         SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
 
     - name: Upload packages to packagecloud.io
-      uses: TykTechnologies/packagecloud-action@main
+      uses: Eugeny/packagecloud-action@main
       if: github.repository == 'Eugeny/tabby' && github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
       env:
         PACKAGECLOUD_TOKEN: ${{ secrets.PACKAGECLOUD_TOKEN }}
@@ -244,25 +243,30 @@ jobs:
         path: artifact-web
 
   Windows-Build:
-    runs-on: windows-2016
+    runs-on: windows-2022
     needs: Lint
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2.3.4
+      uses: actions/checkout@v3
       with:
         fetch-depth: 0
 
     - name: Installing Node
-      uses: actions/setup-node@v2.4.0
+      uses: actions/setup-node@v3.0.0
       with:
-        node-version: 14
+        node-version: 16
+
+    - name: Update node-gyp
+      run: |
+        npm install --global node-gyp@8.4.1
+        npm prefix -g | % {npm config set node_gyp "$_\node_modules\node-gyp\bin\node-gyp.js"}
 
     - name: Build
       shell: powershell
       run: |
         npm i -g yarn@1.19.1
-        yarn
+        yarn --network-timeout 1000000
         node scripts/build-native.js
         yarn run build
         node scripts/prepackage-plugins.js
@@ -274,7 +278,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         WIN_CSC_LINK: ${{ secrets.WIN_CSC_LINK }}
         WIN_CSC_KEY_PASSWORD: ${{ secrets.WIN_CSC_KEY_PASSWORD }}
-        # DEBUG: electron-builder,electron-builder:*
+        DEBUG: electron-builder,electron-builder:*
 
     - name: Build packages without signing
       run: node scripts/build-windows.js
