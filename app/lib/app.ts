@@ -84,7 +84,7 @@ export class Application {
         }
 
         app.on('window-all-closed', () => {
-            if (this.quitRequested) {
+            if (this.quitRequested || process.platform !== 'darwin') {
                 app.quit()
             }
         })
