@@ -1,5 +1,7 @@
 import { ConfigProvider, Platform } from 'tabby-core'
 
+export const DEFAULT_TERMINAL_COLOR_SCHEME_NAME = 'Dark Pastel';
+
 /** @hidden */
 export class TerminalConfigProvider extends ConfigProvider {
     defaults = {
@@ -27,7 +29,7 @@ export class TerminalConfigProvider extends ConfigProvider {
             wordSeparator: ' ()[]{}\'"',
             colorScheme: {
                 __nonStructural: true,
-                name: 'Dark Pastel',
+                name: DEFAULT_TERMINAL_COLOR_SCHEME_NAME,
                 foreground: '#ffffff',
                 background: '#000000',
                 selection: null,
