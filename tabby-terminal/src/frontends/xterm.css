@@ -179,7 +179,7 @@
 
 @font-face {
     font-family: "Tabby Menlo";
-    src: url(../fonts/Menlo.ttf) format('truetype');
+    src: url(../fonts/Menlo.otf) format("opentype");
 }
 
 .xterm-viewport::-webkit-scrollbar {
