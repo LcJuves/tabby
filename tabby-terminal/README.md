@@ -1,4 +1,4 @@
-Tabby Plugin
+Tabby Terminal Plugin
 ------------------------
 
 * terminal tabs
