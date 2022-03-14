@@ -20,8 +20,6 @@ const builtinPluginsPath = process.env.TABBY_DEV ? path.dirname(remote.app.getAp
 
 const cachedBuiltinModules = {
     '@angular/animations': require('@angular/animations'),
-    '@angular/cdk/drag-drop': require('@angular/cdk/drag-drop'),
-    '@angular/cdk/clipboard': require('@angular/cdk/clipboard'),
     '@angular/common': require('@angular/common'),
     '@angular/compiler': require('@angular/compiler'),
     '@angular/core': require('@angular/core'),
@@ -65,22 +63,17 @@ export type ProgressCallback = (current: number, total: number) => void
 export function initModuleLookup (userPluginsPath: string): void {
     global['module'].paths.map((x: string) => nodeModule.globalPaths.push(normalizePath(x)))
 
-    const paths = []
-    paths.unshift(path.join(userPluginsPath, 'node_modules'))
-    paths.unshift(path.join(remote.app.getAppPath(), 'node_modules'))
+    nodeModule.globalPaths.unshift(path.join(userPluginsPath, 'node_modules'))
 
     if (process.env.TABBY_DEV) {
-        paths.unshift(path.dirname(remote.app.getAppPath()))
+        nodeModule.globalPaths.unshift(path.dirname(remote.app.getAppPath()))
     }
 
-    paths.unshift(builtinPluginsPath)
-    // paths.unshift(path.join((process as any).resourcesPath, 'app.asar', 'node_modules'))
+    nodeModule.globalPaths.unshift(builtinPluginsPath)
+    // nodeModule.globalPaths.unshift(path.join((process as any).resourcesPath, 'app.asar', 'node_modules'))
     if (process.env.TABBY_PLUGINS) {
-        process.env.TABBY_PLUGINS.split(':').map(x => paths.push(normalizePath(x)))
+        process.env.TABBY_PLUGINS.split(':').map(x => nodeModule.globalPaths.push(normalizePath(x)))
     }
-
-    process.env.NODE_PATH += path.delimiter + paths.join(path.delimiter)
-    nodeModule._initPaths()
 
     builtinModules.forEach(m => {
         if (!cachedBuiltinModules[m]) {
