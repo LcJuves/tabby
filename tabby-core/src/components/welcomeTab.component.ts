@@ -11,7 +11,7 @@ import { HostWindowService } from '../api/hostWindow'
     styles: [require('./welcomeTab.component.scss')],
 })
 export class WelcomeTabComponent extends BaseTabComponent {
-    enableGlobalHotkey = true
+    enableGlobalHotkey = false
 
     constructor (
         private hostWindow: HostWindowService,

@@ -5,6 +5,7 @@ import { Component, Inject, Input, ChangeDetectionStrategy, ChangeDetectorRef } 
 import { ConfigService, PlatformService } from 'tabby-core'
 import { TerminalColorSchemeProvider } from '../api/colorSchemeProvider'
 import { TerminalColorScheme } from '../api/interfaces'
+import { DEFAULT_TERMINAL_COLOR_SCHEME_NAME } from '../config'
 
 /** @hidden */
 @Component({
@@ -92,7 +93,7 @@ export class ColorSchemeSettingsTabComponent {
     }
 
     getCurrentSchemeName () {
-        return (this.currentCustomScheme ?? this.currentStockScheme)?.name ?? 'Custom'
+        return (this.currentCustomScheme ?? this.currentStockScheme)?.name ?? DEFAULT_TERMINAL_COLOR_SCHEME_NAME
     }
 
     findMatchingScheme (scheme: TerminalColorScheme, schemes: TerminalColorScheme[]) {

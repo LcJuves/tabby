@@ -1,5 +1,7 @@
 import { ConfigProvider, Platform } from 'tabby-core'
 
+export const DEFAULT_TERMINAL_COLOR_SCHEME_NAME = 'Dark Pastel'
+
 /** @hidden */
 export class TerminalConfigProvider extends ConfigProvider {
     defaults = {
@@ -8,7 +10,7 @@ export class TerminalConfigProvider extends ConfigProvider {
         },
         terminal: {
             frontend: 'xterm',
-            fontSize: 14,
+            fontSize: 15,
             fallbackFont: null,
             linePadding: 0,
             bell: 'off',
@@ -27,28 +29,28 @@ export class TerminalConfigProvider extends ConfigProvider {
             wordSeparator: ' ()[]{}\'"',
             colorScheme: {
                 __nonStructural: true,
-                name: 'Material',
-                foreground: '#eceff1',
-                background: 'rgba(38, 50, 56, 1)',
+                name: DEFAULT_TERMINAL_COLOR_SCHEME_NAME,
+                foreground: '#ffffff',
+                background: '#000000',
                 selection: null,
-                cursor: '#FFCC00',
+                cursor: '#bbbbbb',
                 cursorAccent: null,
                 colors: [
                     '#000000',
-                    '#D62341',
-                    '#9ECE58',
-                    '#FAED70',
-                    '#396FE2',
-                    '#BB80B3',
-                    '#2DDAFD',
-                    '#d0d0d0',
-                    'rgba(255, 255, 255, 0.2)',
-                    '#FF5370',
-                    '#C3E88D',
-                    '#FFCB6B',
-                    '#82AAFF',
-                    '#C792EA',
-                    '#89DDFF',
+                    '#ff5555',
+                    '#55ff55',
+                    '#ffff55',
+                    '#5555ff',
+                    '#ff55ff',
+                    '#55ffff',
+                    '#bbbbbb',
+                    '#555555',
+                    '#ff5555',
+                    '#55ff55',
+                    '#ffff55',
+                    '#5555ff',
+                    '#ff55ff',
+                    '#55ffff',
                     '#ffffff',
                 ],
             },
@@ -68,7 +70,7 @@ export class TerminalConfigProvider extends ConfigProvider {
     platformDefaults = {
         [Platform.macOS]: {
             terminal: {
-                font: 'Menlo',
+                font: 'Tabby Menlo',
             },
             hotkeys: {
                 'ctrl-c': ['Ctrl-C'],
@@ -109,7 +111,7 @@ export class TerminalConfigProvider extends ConfigProvider {
         },
         [Platform.Windows]: {
             terminal: {
-                font: 'Consolas',
+                font: 'Tabby Menlo',
                 rightClick: 'paste',
                 pasteOnMiddleClick: false,
                 copyOnSelect: true,
@@ -152,7 +154,7 @@ export class TerminalConfigProvider extends ConfigProvider {
         },
         [Platform.Linux]: {
             terminal: {
-                font: 'Liberation Mono',
+                font: 'Tabby Menlo',
             },
             hotkeys: {
                 'ctrl-c': ['Ctrl-C'],
