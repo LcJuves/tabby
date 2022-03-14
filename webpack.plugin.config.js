@@ -87,7 +87,7 @@ module.exports = options => {
                 { test: /\.svg/, use: ['svg-inline-loader'] },
                 {
                     test: /\.(ttf|eot|otf|woff|woff2|ogg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                    type: 'asset',
+                    type: 'file-loader',
                 },
             ],
         },
