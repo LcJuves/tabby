@@ -177,11 +177,6 @@
     src: url(../fonts/SourceCodePro.otf) format("opentype");
 }
 
-@font-face {
-    font-family: "Tabby Menlo";
-    src: url(../fonts/Menlo.otf) format("opentype");
-}
-
 .xterm-viewport::-webkit-scrollbar {
     background: rgba(0, 0, 0, .125);
 }
