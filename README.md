@@ -34,7 +34,7 @@ This README is also available in: <a href="./README.ko-KR.md">Korean</a>
 * Fully configurable shortcuts and multi-chord shortcuts
 * Split panes
 * Remembers your tabs
-* PowerShell (and PS Core), WSL, Git-Bash, Cygwin, MSYS2, Cmder and CMD support
+* PowerShell (and PS Core), WSL, Git Bash, Cygwin, MSYS2, Cmder and CMD support
 * Direct file transfer from/to SSH sessions via Zmodem
 * Full Unicode support including double-width characters
 * Doesn't choke on fast-flowing outputs

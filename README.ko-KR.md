@@ -29,7 +29,7 @@
 * 전체 구성이 가능한 단축키 및 다중 코드 단축키
 * 창 분할
 * 이전 탭 사용을 기억
-* PowerShell (및 PS Core), WSL, Git-Bash, Cygwin, Cmder 및 CMD 지원
+* PowerShell (및 PS Core), WSL, Git Bash, Cygwin, Cmder 및 CMD 지원
 * Zmodem을 통한 SSH 세션 간의 직접 파일 전송
 * 2바이트 문자를 포함한 전체 유니코드 지원
 * 빠르게 출력되는 것에 대해 휩쓸리지 않음
