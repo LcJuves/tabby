@@ -65,7 +65,7 @@ export class WSLShellProvider extends ShellProvider {
                         TERM: 'xterm-color',
                         COLORTERM: 'truecolor',
                     },
-                    icon: wslIconMap[defaultDistKey.DistributionName.value] ?? wslIconMap.Linux,
+                    icon: wslIconMap[defaultDistKey.DistributionName.value],
                 }
                 shells.push(shell)
             }
