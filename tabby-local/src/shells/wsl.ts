@@ -108,8 +108,7 @@ export class WSLShellProvider extends ShellProvider {
                     TERM: 'xterm-color',
                     COLORTERM: 'truecolor',
                 },
-                // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-                icon: wslIconMap[name] ?? wslIconMap.Linux,
+                icon: wslIconMap[name],
             }
             shells.push(shell)
         }
