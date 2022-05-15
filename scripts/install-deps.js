@@ -5,7 +5,7 @@ const vars = require('./vars')
 const log = require('npmlog')
 
 const localBinPath = path.resolve(__dirname, '../node_modules/.bin')
-const npx = `${localBinPath}/npx`
+const npx = path.resolve(localBinPath, 'npx')
 
 log.info('patch')
 sh.exec(`${npx} patch-package`)
