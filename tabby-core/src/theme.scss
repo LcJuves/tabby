@@ -19,7 +19,11 @@ window-controls {
     }
 
     .btn-close:hover {
-        background: #8a2828;
+        background: #e81123;
+    }
+
+    .btn-close:active {
+        background: #bf0f1d;
     }
 }
 
