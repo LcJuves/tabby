@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <a href="https://github.com/Eugeny/tabby/releases/latest"><img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/eugeny/tabby/total.svg?label=DOWNLOADS&logo=github&style=for-the-badge"></a> &nbsp; <a href="https://nightly.link/Eugeny/tabby/workflows/build/master"><img src="https://shields.io/badge/-Nightly%20Builds-orange?logo=hackthebox&logoColor=fff&style=for-the-badge"/></a> &nbsp; <a href="https://matrix.to/#/#tabby-general:matrix.org"><img alt="Matrix" src="https://img.shields.io/matrix/tabby-general:matrix.org?logo=matrix&style=for-the-badge&color=magenta"></a>
+  <a href="https://github.com/Eugeny/tabby/releases/latest"><img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/eugeny/tabby/total.svg?label=DOWNLOADS&logo=github&style=for-the-badge"></a> &nbsp; <a href="https://nightly.link/Eugeny/tabby/workflows/build/master"><img src="https://shields.io/badge/-Nightly%20Builds-orange?logo=hackthebox&logoColor=fff&style=for-the-badge"/></a> &nbsp; <a href="https://matrix.to/#/#tabby-general:matrix.org"><img alt="Matrix" src="https://img.shields.io/matrix/tabby-general:matrix.org?logo=matrix&style=for-the-badge&color=magenta"></a> &nbsp <a href="https://translate.tabby.sh/"><img alt="Translate" src="https://shields.io/badge/Translate-UI-white?logo=googletranslate&style=for-the-badge&color=white&logoColor=fff"></a> &nbsp; <a href="https://twitter.com/eugeeeeny"><img alt="Twitter" src="https://shields.io/badge/Subscribe-News-blue?logo=twitter&style=for-the-badge&color=blue"></a>
 </p>
 
 <p align="center">
@@ -21,7 +21,7 @@
 
 <br/>
 <p align="center">
-This README is also available in: <a href="./README.ko-KR.md">Korean</a>
+This README is also available in: <a  href="./README.ru-RU.md">:ru: Русский</a> · <a  href="./README.ko-KR.md">:kr: 한국어</a> · <a  href="./README.zh-CN.md">:cn: 简体中文</a> · <a  href="./README.it-IT.md">:it: Italiano</a> · <a href="./README.de-DE.md">:de: Deutsch</a>
 </p>
 
 ----
@@ -40,6 +40,7 @@ This README is also available in: <a href="./README.ko-KR.md">Korean</a>
 * Doesn't choke on fast-flowing outputs
 * Proper shell experience on Windows including tab completion (via Clink)
 * Integrated encrypted container for SSH secrets and configuration
+* SSH, SFTP and Telnet client available as a [web app](https://tabby.sh/app) (also [self-hosted](https://github.com/Eugeny/tabby-web)).
 
 # Contents <!-- omit in toc -->
 
@@ -78,6 +79,7 @@ This README is also available in: <a href="./README.ko-KR.md">Korean</a>
 * Optional RMB paste and copy-on select (PuTTY style)
 
 <a name="ssh"></a>
+
 # SSH Client
 
 ![](docs/readme-ssh.png)
@@ -89,6 +91,7 @@ This README is also available in: <a href="./README.ko-KR.md">Korean</a>
 * Login scripts
 
 <a name="serial"></a>
+
 # Serial Terminal
 
 * Saved connections
@@ -98,24 +101,28 @@ This README is also available in: <a href="./README.ko-KR.md">Korean</a>
 * Automatic reconnection
 
 <a name="portable"></a>
+
 # Portable
 
 Tabby will run as a portable app on Windows, if you create a `data` folder in the same location where `Tabby.exe` lives.
 
 <a name="plugins"></a>
+
 # Plugins
 
 Plugins and themes can be installed directly from the Settings view inside Tabby.
 
-* [clickable-links](https://github.com/Eugeny/tabby-clickable-links) - makes paths and URLs in the terminal clickable
 * [docker](https://github.com/Eugeny/tabby-docker) - connect to Docker containers
 * [title-control](https://github.com/kbjr/terminus-title-control) - allows modifying the title of the terminal tabs by providing a prefix, suffix, and/or strings to be removed
 * [quick-cmds](https://github.com/Domain/terminus-quick-cmds) - quickly send commands to one or all terminal tabs
 * [save-output](https://github.com/Eugeny/tabby-save-output) - record terminal output into a file
 * [sync-config](https://github.com/starxg/terminus-sync-config) - sync the config to Gist or Gitee
 * [clippy](https://github.com/Eugeny/tabby-clippy) - an example plugin which annoys you all the time
+* [workspace-manager](https://github.com/composer404/tabby-workspace-manager) - allows creating custom workspace profiles based on the given config
+* [search-in-browser](https://github.com/composer404/tabby-search-in-browser) - opens default system browser with a text selected from the Tabby's tab
 
 <a name="themes"></a>
+
 # Themes
 
 * [hype](https://github.com/Eugeny/tabby-theme-hype) - a Hyper inspired theme
@@ -260,5 +267,3 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
-<img src="https://ga-beacon.appspot.com/UA-3278102-18/github/readme" width="1"/>
