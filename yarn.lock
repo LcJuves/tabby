@@ -5355,10 +5355,10 @@ node-abi@^2.30.0, node-abi@^3.0.0:
   dependencies:
     semver "^5.4.1"
 
-node-abi@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-3.1.0.tgz#9560f38fbe2309e87c61f4f103c9d95e0f961c32"
-  integrity sha512-kVF+eIDzPPwPcJdoVhWboJvdCe+YF1+rkd7+LeYmA95179T0sVB5kKG8VADM/3sBnGWeAUBR8FzH+whlksJTrQ==
+node-abi@^3.51.0:
+  version "3.51.0"
+  resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-3.51.0.tgz#970bf595ef5a26a271307f8a4befa02823d4e87d"
+  integrity sha512-SQkEP4hmNWjlniS5zdnfIXTk1x7Ome85RDzHlTbBtzE97Gfwz/Ipw4v/Ryk20DWIy3yCNVLVlGKApCnmvYoJbA==
   dependencies:
     semver "^7.3.5"
 
