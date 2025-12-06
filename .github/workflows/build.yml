@@ -2,7 +2,7 @@ name: Package-Build
 on: [push, pull_request]
 jobs:
   Lint:
-    runs-on: macOS-latest
+    runs-on: macos-13
 
     steps:
     - name: Checkout
@@ -31,7 +31,7 @@ jobs:
       run: yarn run lint
 
   macOS-Build:
-    runs-on: macOS-latest
+    runs-on: macos-13
     needs: Lint
     strategy:
       matrix:
