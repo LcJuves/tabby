@@ -14,7 +14,7 @@
   "files": [
     "dist"
   ],
-  "author": "Eugene Pankov",
+  "author": "Tabby Developers",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "14.14.14",

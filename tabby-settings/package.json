@@ -14,7 +14,7 @@
   "files": [
     "typings"
   ],
-  "author": "Eugene Pankov",
+  "author": "Tabby Developers",
   "license": "MIT",
   "devDependencies": {
     "marked": "^3.0.2",

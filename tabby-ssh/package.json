@@ -18,7 +18,7 @@
     "dist",
     "util/pagent.exe"
   ],
-  "author": "Eugene Pankov",
+  "author": "Tabby Developers",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "16.0.1",

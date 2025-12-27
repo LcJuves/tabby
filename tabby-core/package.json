@@ -14,7 +14,7 @@
   "files": [
     "typings"
   ],
-  "author": "Eugene Pankov",
+  "author": "Tabby Developers",
   "license": "MIT",
   "devDependencies": {
     "@types/js-yaml": "^4.0.0",

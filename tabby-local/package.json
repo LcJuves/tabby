@@ -14,7 +14,7 @@
   "files": [
     "typings"
   ],
-  "author": "Eugene Pankov",
+  "author": "Tabby Developers",
   "license": "MIT",
   "dependencies": {
     "opentype.js": "^1.3.3"
