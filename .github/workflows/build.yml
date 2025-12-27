@@ -6,22 +6,21 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v3.0.2
+      uses: actions/checkout@v6
       with:
         fetch-depth: 0
 
     - name: Installing Node
-      uses: actions/setup-node@v3.2.0
+      uses: actions/setup-node@v6
       with:
-        node-version: 16
+        node-version: 24.12.0
 
     - name: Install deps
       run: |
-        npm i -g yarn@1.19.1
+        npm i -g yarn
         cd app
         yarn
         cd ..
-        rm app/node_modules/.yarn-integrity
         yarn
 
     - name: Build typings
@@ -41,22 +40,21 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v3.0.2
+      uses: actions/checkout@v6
       with:
         fetch-depth: 0
 
     - name: Installing Node
-      uses: actions/setup-node@v3.2.0
+      uses: actions/setup-node@v6
       with:
-        node-version: 16
+        node-version: 24.12.0
 
     - name: Install deps
       run: |
-        sudo npm i -g yarn@1.22.1
+        npm i -g yarn
         cd app
         yarn
         cd ..
-        rm app/node_modules/.yarn-integrity
         yarn
 
     - name: Build native deps
@@ -134,24 +132,23 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v3.0.2
+      uses: actions/checkout@v6
       with:
         fetch-depth: 0
 
     - name: Install Node
-      uses: actions/setup-node@v3.2.0
+      uses: actions/setup-node@v6
       with:
-        node-version: 16
+        node-version: 24.12.0
 
     - name: Install deps
       run: |
         sudo apt-get update
         sudo apt-get install libarchive-tools zsh
-        npm i -g yarn@1.19.1
+        npm i -g yarn
         cd app
         yarn
         cd ..
-        rm app/node_modules/.yarn-integrity
         yarn
         npm run patch
 
@@ -249,19 +246,19 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v3.0.2
+      uses: actions/checkout@v6
       with:
         fetch-depth: 0
 
     - name: Installing Node
-      uses: actions/setup-node@v3.2.0
+      uses: actions/setup-node@v6
       with:
-        node-version: 16
+        node-version: 24.12.0
 
     - name: Build
       shell: powershell
       run: |
-        npm i -g yarn@1.19.1
+        npm i -g yarn
         yarn
         node scripts/build-native.js
         yarn run build
