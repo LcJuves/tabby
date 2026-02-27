@@ -27,10 +27,10 @@ ansi-colors@^4.1.1:
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-4.1.1.tgz#cbb9ae256bf750af1eab344f229aa27fe94ba348"
   integrity sha512-JoX0apGbHaUJBNl6yF+p6JAFYZ666/hhCGKN5t9QFjbJQKUU/g8MNbFDbvfrgKXvI1QpZplPOnwIo99lX/AAmA==
 
-ansi-regex@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-6.0.0.tgz#ecc7f5933cbe5ac7b33e209a5ff409ab1669c6b2"
-  integrity sha512-tAaOSrWCHF+1Ear1Z4wnJCXA9GGox4K6Ic85a5qalES2aeEwQGr7UC93mwef49536PkCYjzkp0zIxfFvexJ6zQ==
+ansi-regex@^6.2.2:
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-6.2.2.tgz#60216eea464d864597ce2832000738a0589650c1"
+  integrity sha512-Bq3SmSpyFHaWjPk8If9yc6svM8c56dB5BAtW4Qbw5jHTwwXXcTLoRMkpDJp6VL0XzlWaCHTXrkFURMYmD0sLqg==
 
 asn1@~0.2.3:
   version "0.2.4"
@@ -247,11 +247,11 @@ stack-trace@0.0.x:
   integrity sha1-VHxws0fo0ytOEI6hoqFZ5f3eGcA=
 
 strip-ansi@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-7.0.0.tgz#1dc49b980c3a4100366617adac59327eefdefcb0"
-  integrity sha512-UhDTSnGF1dc0DRbUqr1aXwNoY3RgVkSWG8BrpnuFIxhP57IqbS7IRta2Gfiavds4yCxc5+fEAVVOgBZWnYkvzg==
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-7.2.0.tgz#d22a269522836a627af8d04b5c3fd2c7fa3e32e3"
+  integrity sha512-yDPMNjp4WyfYBkHnjIRLfca1i6KMyGCtsVgoKe/z1+6vukgaENdgGBZt+ZmKPc4gavvEZ5OgHfHdrazhgNyG7w==
   dependencies:
-    ansi-regex "^6.0.0"
+    ansi-regex "^6.2.2"
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
