@@ -17,10 +17,10 @@ binstring@^0.2.1:
   resolved "https://registry.yarnpkg.com/binstring/-/binstring-0.2.1.tgz#8a174d301f6d54efda550dd98bb4cb524eacd75d"
   integrity sha1-ihdNMB9tVO/aVQ3Zi7TLUk6s110=
 
-buffer-replace@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/buffer-replace/-/buffer-replace-1.0.0.tgz#bc427c40af4c1f06d6933dede57110acba8ade54"
-  integrity sha1-vEJ8QK9MHwbWkz3t5XEQrLqK3lQ=
+buffer-replace@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/buffer-replace/-/buffer-replace-2.0.0.tgz#5b2d64a89848a5f68782ddb336c0865097bf5db9"
+  integrity sha512-KPX5rC80XIuJfWdqOyFYjl3om5wFzKw1OpviLKFVyTO20Spu6rS5wQJhV/8s22OAP1U9AkO8WiSb15qYq4MXeg==
 
 cli-spinner@^0.2.10:
   version "0.2.10"
